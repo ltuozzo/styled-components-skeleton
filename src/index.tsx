@@ -1,12 +1,19 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import { theme } from './styles/config/theme';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <StrictMode>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
+  </StrictMode>,
   // eslint-disable-next-line unicorn/prefer-query-selector
   document.getElementById('root'),
 );
