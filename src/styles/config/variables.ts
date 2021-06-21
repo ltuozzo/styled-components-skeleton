@@ -18,5 +18,6 @@ export enum TextTransform {
 }
 
 export enum FontFamily {
+  // TODO change font
   ClimatePledgeSans = 'Climate Pledge Sans, sans-serif',
 }
